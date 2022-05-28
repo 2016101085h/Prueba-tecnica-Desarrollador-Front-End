@@ -1,0 +1,17 @@
+<div class="animated fadeIn container mt-5">
+  <app-loading *ngIf="loading"></app-loading>
+<div class="row">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h1 class="text-center mb-5">Tienda de Libros de Biblioteca</h1>
+    <form class="form-inline my-2 my-lg-0">
+      <input  (keyup.enter)="buscarLibro(buscarTexto.value)" #buscarTexto class="form-control mr-sm-2" type="search" placeholder="Buscar Libro (SKU)" aria-label="Search">
+      <button class="btn btn-success my-2 my-sm-0" type="submit" (click)="buscarLibro(buscarTexto.value)">Buscar</button>
+    </form>
+  </div>
+</div>
+<div class="row px-4">
+  <div class="card-columns">
+    <app-tarjetas [index]="i" [libro]="foo" *ngFor="let foo of datos; let i = index"></app-tarjetas>
+  </div>
+</div>
+</div>

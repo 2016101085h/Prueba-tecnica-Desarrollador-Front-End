@@ -1,0 +1,15 @@
+<div class="card">
+  <img [src]="libro.image" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title font-weight-bold text-center">{{libro.name}}</h5>
+    <p class="card-text text-center">{{libro.description}}</p>
+    <p class="card-text text-center">SKU: <small class="text-muted">{{libro.sku}}</small></p>
+    <p class="h1 badge badge-info font-precio mb-5 ">{{  'S/. ' + libro.price }}</p>
+    <div class="mb-4">
+      <LAbel class="text-danger">Ingrese una cantidad</LAbel>
+      <input [(ngModel)]="cantidad" type="text" class="form-control" placeholder="Cantidad">
+    </div>
+    <button (click)="agregarAlCarrito(libro)" class="btn btn-warning btn-block">Agregar al Carrito</button>
+    <!-- <a [routerLink]="['/heroe', i]" class="btn btn-outline-dark btn-block">Ver Mas</a> -->
+  </div>
+</div>
